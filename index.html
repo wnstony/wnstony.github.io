@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang>
+<html class="theme-next muse use-motion" lang="_en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,12 +97,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="A BioMedTek Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="A BioMedTek Blog">
+<meta property="og:locale" content="_en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="A BioMedTek Blog">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>A BioMedTek Blog</title>
   
 
 
@@ -161,7 +161,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="_en">
 
   
   
@@ -180,7 +180,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">A BioMedTek Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -189,7 +189,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -217,7 +217,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -234,7 +234,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -286,16 +286,165 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/latex-MultilingualFont/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="N. Wang">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="A BioMedTek Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/29/latex-MultilingualFont/" class="post-title-link" itemprop="url">latex_MultilingualFont</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-29 15:54:43 / Modified: 15:55:27" itemprop="dateCreated datePublished" datetime="2019-03-29T15:54:43+08:00">2019-03-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Fonts"><a href="#Fonts" class="headerlink" title="Fonts"></a>Fonts</h1><p>概念：字体名/字族名，PostScript名称，<br>中英文混排，使用XeLaTeX编译</p>
+<p>使用 XeLaTeX 编译时，底层依赖 xeCJK 宏包支持中文，使用 \setCJKmainfont 等命令配置中文字体；具体参见其宏包文档。对于英文， xeCJK 又依赖 fontspec 宏包，使用 \setmainfont 等命令配置西文字体；具体参见其宏包文档（英文）。</p>
+<h2 id="检查安装的字体"><a href="#检查安装的字体" class="headerlink" title="检查安装的字体"></a>检查安装的字体</h2><h3 id="系统中文字体"><a href="#系统中文字体" class="headerlink" title="系统中文字体"></a>系统中文字体</h3><p>Mac：在字体册程序中查看<br>Win：在命令行中输入<code>fc-list :lang=zh-cn &gt; C:\font_zh-cn.txt</code>，打开C盘<code>C:\font_zh-cn.txt</code>，可见字体显示如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;字体文件路径&gt;: &lt;字体标示名1&gt;, &lt;字体表示名2&gt;:Style=&lt;字体类型&gt;</span><br></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:/WINDOWS/fonts/simsun.ttc: 宋体,SimSun:style=Regular</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置字体"><a href="#配置字体" class="headerlink" title="配置字体"></a>配置字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;xeCJK&#125;</span><br><span class="line">\setCJKmainfont[BoldFont=STZhongsong, ItalicFont=STKaiti]&#123;STSong&#125;</span><br><span class="line">\setCJKsansfont[BoldFont=STHeiti]&#123;STXihei&#125;</span><br><span class="line">\setCJKmonofont&#123;STFangsong&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="中文排版"><a href="#中文排版" class="headerlink" title="中文排版"></a>中文排版</h2><p><code>xeCJK</code>只解决了中文支持问题，以及一些关于标点的处理，并没有提供和中文版式相关的解决方案。<code>ctex</code>宏包和文档类封装了<code>xeCJK</code>，同时提供了中文版式的相关支持。新版的<code>ctex</code>宏包和文档类能够自动检测用户使用的操作系统，自动选择合适的字体配置，十分方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[UTF8]&#123;ctexart&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果希望<code>ctex</code>只提供中文支持的功能不对版式做任何修改，也可以这样使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage[UTF8, heading = false, scheme = plain]&#123;ctex&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N. Wang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A BioMedTek Blog">
     </span>
 
     
@@ -324,14 +473,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-03-29 15:22:36" itemprop="dateCreated datePublished" datetime="2019-03-29T15:22:36+08:00">2019-03-29</time>
+              <time title="Created: 2019-03-29 15:22:36" itemprop="dateCreated datePublished" datetime="2019-03-29T15:22:36+08:00">2019-03-29</time>
             
 
             
@@ -449,7 +598,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">N. Wang</p>
               <div class="site-description motion-element" itemprop="description"></div>
           </div>
 
@@ -460,8 +609,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -510,7 +659,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">N. Wang</span>
 
   
 
@@ -518,7 +667,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -526,7 +675,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
 
 
 
